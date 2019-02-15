@@ -1,0 +1,13 @@
+{
+  "name": "schemaUI",
+  "author": "Lester Thomas"
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node ./generator.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

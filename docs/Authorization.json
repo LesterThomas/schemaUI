@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Authorization.schema.json",
+  "title": "Authorization",
+  "definitions": {
+    "Authorization": {
+      "$id": "#Authorization",
+      "description": "If special discount or special product offering price or specific condition need an approval for ISP sale representative it is described here.",
+      "type": "object",
+      "properties": {
+        "authorizationGivenDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date when the authorization (approved or declined) was done"
+        },
+        "authorizationName": {
+          "type": "string",
+          "description": "Name of the required authorization"
+        },
+        "authorizationRequestedDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date when the authorization is requested for"
+        },
+        "authorizationSignatureRepresentation": {
+          "type": "string",
+          "description": "To describe a digital or manual signature"
+        },
+        "authorizationState": {
+          "type": "string",
+          "description": "State of the authorization, such as: approved or declined"
+        },
+        "approver": {
+          "type": "array",
+          "items": {
+            "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Entity.schema.json#Entity"
+        }
+      ]
+    }
+  },
+  "$comment:status": "Not validated"
+}

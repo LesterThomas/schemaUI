@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ResourceRef.schema.json",
+  "title": "ResourceRef",
+  "definitions": {
+    "ResourceRef": {
+      "$id": "#ResourceRef",
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "description": "Reference of the supporting resource"
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the supporting resource"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the resource supporting the service"
+        },
+        "@referredType": {
+          "type": "string",
+          "description": "The actual type of the target instance when needed for disambiguation."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Entity.schema.json#Entity"
+        }
+      ]
+    }
+  },
+  "$comment:status": "Not validated"
+}
